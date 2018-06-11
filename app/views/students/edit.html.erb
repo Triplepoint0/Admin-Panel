@@ -1,3 +1,5 @@
+<div class="justify-content-center">
+<section class="top-m2"style="width:50%; height:500px;overflow-x:hidden; border:solid black 2px; border-radius: 25px; padding:25px 25px 25px 25px;">
 <%=form_for @students do |student| %>
   <div class="form-group">
   <%= student.label :first_name %>
@@ -15,6 +17,9 @@
     <%= student.label :education %>
     <%= student.select :education,["Highschool","College","Masters","PHD"] %>
     </div>
-<%= student.submit "Update Student" %>
+    <%= student.submit "Update Student", class: "btn btn-primary" %>
+
+</section>
+</div>
 
 <% end %>

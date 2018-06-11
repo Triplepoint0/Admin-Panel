@@ -6,7 +6,9 @@
         <th scope="col">Name</th>
         <th scope="col">Start Date</th>
         <th scope="col">End Date</th>
-        <th scope="col">Cohorts</th>
+        <th scope="col">Course</th>
+        <th scope="col">Options</th>
+
       </tr>
     </thead>
     <tbody>
@@ -16,9 +18,10 @@
         <td><%= cohort.name %></td>
         <td><%= cohort.start_date %></td>
         <td><%= cohort.end_date %></td>
-        <td class="btn btn-dark"><%= link_to "Show", cohort %></td>
-        <td class="btn btn-dark"><%= link_to "Edit Cohort", edit_cohort_path(cohort) %></td>
-        <td class="btn btn-danger"><%= link_to 'Annihilate', cohort, method: :delete, data: { confirm: 'FoSho?' } %></td>
+        <td><%= cohort.course.name %></td>
+        <td class="btn btn-success"><%= link_to "Show", cohort %></td>
+        <td class="btn btn-info"><%= link_to "Edit Cohort", edit_cohort_path(cohort) %></td>
+        <td class="btn btn-danger"><%= link_to 'Delete', cohort, method: :delete, data: { confirm: 'FoSho?' } %></td>
 
       </tr>
       <% end %>

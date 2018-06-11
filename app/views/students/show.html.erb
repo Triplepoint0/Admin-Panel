@@ -20,7 +20,7 @@
               <td><%= @students.age %></td>
               <td><%= @students.education %></td>
               <td class="btn btn-dark"><%= link_to 'Edit', edit_student_path(@students) %></td>
-              <td class="btn btn-danger"><%= link_to 'Destroy', @students, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td class="btn btn-danger"><%= link_to 'Delete', @students, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
 
         </tbody>

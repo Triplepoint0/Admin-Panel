@@ -8,6 +8,7 @@
             <th>Last name</th>
             <th>Age</th>
             <th>Education</th>
+            <th>Options</th>
 
           </tr>
         </thead>
@@ -19,9 +20,9 @@
               <td><%= student.last_name %></td>
               <td><%= student.age %></td>
               <td><%= student.education %></td>
-              <td class="btn btn-dark"><%= link_to 'Show', student %></td>
-              <td class="btn btn-dark"><%= link_to 'Edit', edit_student_path(student) %></td>
-              <td class="btn btn-danger"><%= link_to 'Annihilate', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td class="btn btn-success"><%= link_to 'Show', student %></td>
+              <td class="btn btn-info"><%= link_to 'Edit', edit_student_path(student) %></td>
+              <td class="btn btn-danger"><%= link_to 'Delete', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
           <% end %>
         </tbody>

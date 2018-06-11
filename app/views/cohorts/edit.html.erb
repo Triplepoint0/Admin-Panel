@@ -1,3 +1,6 @@
+
+<div class="justify-content-center">
+<section class="top-m2"style="width:50%; height:500px;overflow-x:hidden; border:solid black 2px; border-radius: 25px; padding:25px 25px 25px 25px;">
 <%=form_for @cohort do |f| %>
   <div class="form-group">
   <%= f.label :name %>
@@ -14,9 +17,8 @@
         <div class="form-group">
     <%= f.label :course_id %>
     <%= f.collection_select(:course_id, Course.all, :id, :name) %>
+    <%= f.submit "Update Cohort", class: "btn btn-primary btn-sm"%>
     </div>
-
-<%= f.submit "Update Cohort" %>
 
 <% end %>
 
@@ -28,11 +30,12 @@
   <div class="form-group">
   <%= f.label :teacher_id %>
   <%= f.collection_select(:teacher_id, Teacher.all, :id, :teacher_full_name) %>
+  <%= f.submit "Add Teacher", class: "btn btn-primary btn-sm" %>
   </div>
   <div class="form-group">
   <%= f.hidden_field(:cohort_id, value: "#{@cohort.id}") %>
   </div>
-<%= f.submit "Add Teacher" %>
+
 
 <% end %>
 
@@ -46,12 +49,13 @@
   <div class="form-group">
   <%= f.label :student_id %>
   <%= f.collection_select(:student_id, Student.all, :id, :student_full_name) %>
+  <%= f.submit "Add Student", class:"btn btn-primary btn-sm" %>
   </div>
   <div class="form-group">
   <%= f.hidden_field(:cohort_id, value: "#{@cohort.id}") %>
   </div>
-<%= f.submit "Add Student" %>
-
+</section>
+</div>
 <% end %>
 
 

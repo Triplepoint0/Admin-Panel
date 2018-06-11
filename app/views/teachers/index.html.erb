@@ -9,7 +9,8 @@
             <th>Age</th>
             <th>Education</th>
             <th>Salary</th>
-              </tr>
+            <th>Options</th>
+          </tr>
         </thead>
 
         <tbody>
@@ -20,9 +21,9 @@
               <td><%= teacher.age %></td>
               <td><%= teacher.education %></td>
               <td><%= teacher.salary %></td>
-              <td class="btn btn-dark"><%= link_to 'Show', teacher %></td>
-              <td class="btn btn-dark"><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
-              <td class="btn btn-danger"><%= link_to 'Annihilate', teacher, method: :delete, data: { confirm: 'FoSho?' } %></td>
+              <td class="btn btn-success"><%= link_to 'Show', teacher %></td>
+              <td class="btn btn-info"><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
+              <td class="btn btn-danger"><%= link_to 'Delete', teacher, method: :delete, data: { confirm: 'FoSho?' } %></td>
             </tr>
           <% end %>
         </tbody>
